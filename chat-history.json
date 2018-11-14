@@ -1,0 +1,6 @@
+[
+	{"user":"Austin","message":"this is a test message"},
+	{"user":"Emily","message":"Test message, it will store in the chat-history.json file"},
+	{"user":"Ted","message":"Check the file if you don't believe this :-)"},
+	{"user":"chicken","message":"🍆💦💦"}
+]

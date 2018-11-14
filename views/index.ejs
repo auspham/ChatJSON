@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chatbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/main.css" />
+</head>
+<body>
+    <div id="container">
+        
+            <div class="message">
+                <ul>
+                <% if(typeof data != 'undefined'){ %>
+                    <% data = JSON.parse(data); %>
+                    <% data.forEach(line => { %>
+                    <li>
+                        <b><%= line.user %></b> : <%= line.message %>
+                    </li>
+                    <% }); %>
+                <%}%>
+                </ul>
+            </div>
+            <form action="/" method="POST">
+                <input type="text" name="user" placeholder="Username">
+                <input type="text" name="message" placeholder="Message">
+                <input type="submit" value="Send">
+            </form>
+    </div>
+    <script>
+        const chat = document.querySelector('.message');
+        chat.scrollTop += 10000;
+    </script>
+</body>
+</html>
